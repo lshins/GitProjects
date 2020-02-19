@@ -37,4 +37,5 @@ public:
 
 	void getZone(string& timeZone);
 };
+
 #endif
