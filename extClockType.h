@@ -8,6 +8,7 @@ using namespace std;
 class extClockType : protected clockType
 {
 	string tz;
+	int zoneInt;
 
 public:
 	void setTime(string timeZone, int years, int months, int days, int hours, int minutes, int seconds);
@@ -31,11 +32,15 @@ public:
 	//Postcondition: Returns true if this time is equal to
 	//    otherClock; otherwise, returns false
 
-	void compareZones(const clockType otherClock) const;
-
 	void setZone(string timeZone);
 
 	void getZone(string& timeZone);
+
+	extClockType();
+
+	extClockType(string timeZone, int years, int months, int days, int hours, int minutes, int seconds);
+
+	~extClockType();
 };
 
 #endif
