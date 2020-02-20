@@ -63,7 +63,7 @@ public:
 	//Postcondition: hr = 0; min = 0; sec = 0
 
 
-private:
+protected:
 	int yr;
 	int mon;
 	int day;

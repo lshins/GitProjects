@@ -19,7 +19,7 @@ public:
 	//    minutes, and seconds are valid. If a value is invalid,
 	//    the default value 0 is assigned.
 
-	void getTime(string& timeZone, int& years, int& months, int& days, int& hours, int& minutes, int& seconds) const;
+	void getTime(string& timeZone, int& years, int& months, int& days, int& hours, int& minutes, int& seconds);
 	//Function to return the time
 	//Postcondition: hours = hr; minutes = min; seconds = sec
 
@@ -27,7 +27,7 @@ public:
 	//Function to print the time
 	//Postcondition: Time is printed in the form hh:mm:ss.
 
-	bool equalTime(const clockType& otherClock) const;
+	bool equalTime(const extClockType& otherClock);
 	//Function to compare the two times
 	//Postcondition: Returns true if this time is equal to
 	//    otherClock; otherwise, returns false
