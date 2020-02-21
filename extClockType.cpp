@@ -44,6 +44,65 @@ void extClockType::printTime() const
 	clockType::printTime();
 }
 
+void extClockType::incrementYears()
+{
+	yr++;
+	//if (yr > 9)
+		//yr = 0;
+}
+
+void extClockType::incrementMonths()
+{
+	mon++;
+	if (mon > 11)
+	{
+		mon = 0;
+		incrementYears();
+	}
+}
+
+void extClockType::incrementDays()
+{
+	day++;
+	if (day > 30)
+	{
+		day = 0;
+		incrementMonths();
+	}
+	// fix for months with less than 31 days
+}
+
+void extClockType::incrementHours()
+{
+	hr++;
+	if (hr > 23)
+	{
+		hr = 0;
+		incrementDays();
+	}
+}
+
+void extClockType::incrementMinutes()
+{
+	min++;
+	if (min > 59)
+	{
+		min = 0;
+		incrementHours();
+	}
+}
+
+void extClockType::incrementSeconds()
+{
+	sec++;
+
+	if (sec > 59)
+	{
+		sec = 0;
+		incrementMinutes();
+	}
+}
+
 bool extClockType::equalTime(const extClockType& otherClock)
 {
 	int dif, i;
